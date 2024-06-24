@@ -21,6 +21,14 @@ export default class Pawn {
       // black pawns can move "down" by one
       moves.push(new Square(location.row - 1, location.col))
     }
+    //if at top cannot move 
+    //can more one OR two squares in first move
+    //cannot move if there is a piece in front 
+    //cannot move two scares if there is a piece two squares in front 
+    //can move diagonally if there is a piece there 
+    //cannot move diagonally if there is not a piece there 
+    //cannot friendly fire
+    //cannot take opposite king
 
     return moves
   }
