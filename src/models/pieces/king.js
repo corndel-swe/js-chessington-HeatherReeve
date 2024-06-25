@@ -44,8 +44,4 @@ export default class King extends Piece {
     return moves
   }
 
-  moveTo(board, newSquare) {
-    const currentSquare = board.findPiece(this)
-    board.movePiece(currentSquare, newSquare)
-  }
 }
