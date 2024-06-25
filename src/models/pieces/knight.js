@@ -8,6 +8,12 @@ export default class Knight {
 
   getAvailableMoves(board) {
     return []
+    //copy king one 
+    //knights move in an L shape 
+    //one in one direction 
+    //two in the other 
+    //8 moves
+    //BE METHODICAL AND CAREFUL
   }
 
   moveTo(board, newSquare) {
