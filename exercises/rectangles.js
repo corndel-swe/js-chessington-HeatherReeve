@@ -1,9 +1,10 @@
-export class Rectangle {
+export class Rectangle { 
   #width
   #height
-
+ 
   constructor(width, height) {
-    this.#width = width
+   
+   this.#width = width
     this.#height = height
   }
 
@@ -24,26 +25,10 @@ export class Rectangle {
   }
 }
 
-export class Square {
+export class Square extends Rectangle{
   #side
 
   constructor(side) {
-    this.#side = side
-  }
-
-  area() {
-    return this.#side * this.#side
-  }
-
-  perimeter() {
-    return 4 * this.#side
-  }
-
-  width() {
-    return this.#side
-  }
-
-  height() {
-    return this.#side
+    super (side,side)
   }
 }

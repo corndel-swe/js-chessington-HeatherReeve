@@ -7,6 +7,20 @@ export default class Knight {
   }
 
   getAvailableMoves(board) {
+
+    let location =board.findPiece(this)
+    let moves = []
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     return []
     //copy king one 
     //knights move in an L shape 
