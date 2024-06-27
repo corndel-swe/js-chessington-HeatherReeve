@@ -1,12 +1,21 @@
-import Maths from '../exercises'
+import {Maths} from '../exercises/maths.js'
 import { describe, it} from 'mocha'
 import assert from 'assert'
 
 describe('Maths class', function() {
     it('should have PI equal to 3.14', function (){
-        const PI = Maths.PI() 
-            assert.strictEqual (PI, 3.14)
+        const PI = new Maths () 
+            assert.strictEqual (Maths.PI, 3.14)
         
     })
 })
 
+
+
+describe('Maths class', function() {
+    it('returns largets of two numbers', function (){
+        const max = Maths.max(9,15) 
+            assert.strictEqual (max, 15)
+        
+    })
+})
