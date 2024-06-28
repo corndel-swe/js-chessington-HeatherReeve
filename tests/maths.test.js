@@ -19,3 +19,12 @@ describe('Maths class', function() {
         
     })
 })
+
+describe('Math class', function (){
+it ('returns the same number when given a whole number', function () { 
+const round = Maths.round(4)
+assert.strictEqual (round, 4)
+
+
+}) 
+ })
