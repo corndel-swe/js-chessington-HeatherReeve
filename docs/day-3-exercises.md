@@ -6,22 +6,22 @@ in the module work as expected.
 
 We'll use the `mocha` testing framework to write and run our tests.
 
-- [ ] Have a read of the
+- [x] Have a read of the
       [Unit Testing with Mocha](https://tech-docs.corndel.com/js/testing-with-mocha.html)
       documentation to get an idea of how to use `mocha`.
 
 There's an empty file called `maths.test.js` in the `tests` directory. We'll
 write our tests here.
 
-- [ ] Write a test that ensures `Maths.PI` is present in the `Maths` class, and
+- [x] Write a test that ensures `Maths.PI` is present in the `Maths` class, and
       ensure it is equal to `3.14`.
 
-- [ ] Write a test that checks that `Maths.max` returns the largest of two
+- [x] Write a test that checks that `Maths.max` returns the largest of two
       numbers. - No need to be too fancy with this test. Just put two numbers
       into `Maths.max` and check that the result is the larger of the two
       numbers.
 
-- [ ] Run your test with `npm run test:maths` in your terminal.
+- [x] Run your test with `npm run test:maths` in your terminal.
 
 ## Exercise 2: Arrange, Act, Assert
 
@@ -30,24 +30,24 @@ Now, let's write some tests for our `Rectangle` class in
 
 We want to test that the `area` and `perimeter` methods work as expected.
 
-- [ ] Read the
+- [x] Read the
       [Arrange, Act, Assert](https://tech-docs.corndel.com/js/arrange-act-assert.html)
       documentation to get an idea of how to structure your tests.
 
 Write a test that checks that the `area` method of `Rectangle` returns the
 correct value:
 
-- [ ] Arrange: You should create a new `Rectangle` with a known width and
+- [x] Arrange: You should create a new `Rectangle` with a known width and
       height.
 
-- [ ] Act: Call the `area` method on the `Rectangle`.
+- [x] Act: Call the `area` method on the `Rectangle`.
 
-- [ ] Assert: Check that the result is the expected area.
+- [x] Assert: Check that the result is the expected area.
 
-- [ ] Similarly, write a test that checks that the `perimeter` method of
+- [x] Similarly, write a test that checks that the `perimeter` method of
       `Rectangle` returns the correct value.
 
-- [ ] Run your test with `npm run test:rectangles` in your terminal.
+- [x] Run your test with `npm run test:rectangles` in your terminal.
 
 ## Exercise 3: Test Driven Development
 

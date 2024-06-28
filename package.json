@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,7 +19,7 @@
     "test:rectangles": "mocha tests/rectangles.test.js"
   },
   "devDependencies": {
-    "mocha": "^10.3.0",
+    "mocha": "^10.5.2",
     "prettier": "^3.2.5",
     "vite": "^5.1.0"
   },
@@ -26,3 +27,4 @@
     "cm-chessboard": "^8.5.0"
   }
 }
+
