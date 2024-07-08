@@ -2,8 +2,9 @@ import Square from '../square.js'
 import Player from '../player.js'
 import Piece from './piece.js'
 
-export default class Pawn {
+export default class Pawn extends Piece{
   constructor(player) {
+    super ()
     this.player = player
   }
 
@@ -21,12 +22,16 @@ export default class Pawn {
       // black pawns can move "down" by one
       moves.push(new Square(location.row - 1, location.col))
     }
-
+    if ( location.row ===1){
+      moves.push(new Square(location.row + 2,location.col))
+    } else {
+      moves.push(new Square(location.row -2, location.col))
+    }
+   
+    
     return moves
   }
 
-  moveTo(board, newSquare) {
-    const currentSquare = board.findPiece(this)
-    board.movePiece(currentSquare, newSquare)
-  }
+ 
+
 }
