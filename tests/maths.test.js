@@ -28,3 +28,31 @@ assert.strictEqual (round, 4)
 
 }) 
  })
+ 
+describe('Math class', function (){
+    it ('rounds down', function () { 
+    const round = Maths.round(4.2)
+    assert.strictEqual (round, 4)
+    
+    
+    }) 
+})
+    
+    describe('Math class', function (){
+        it ('rounds up', function () { 
+        const round = Maths.round(4.8)
+        assert.strictEqual (round, 5)
+        
+        
+        }) 
+    })
+    describe('Math class', function (){
+        it ('rounds down', function () { 
+            
+        const floorDown = Maths.floor(4.8)
+        assert.strictEqual (floorDown, 4)
+        
+        
+        }) 
+    })
+        

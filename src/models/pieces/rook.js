@@ -6,16 +6,43 @@ export default class Rook {
     this.player = player
   }
 
+ 
   getAvailableMoves(board) {
-    return []
+    // get the square currently occupied by the bishop
+    let location = board.findPiece(this)
+    
+    // the list of valid moves
+    let moves = []
+
+    for (let i = 1; i <= 7; i++) {
+      if (location.row + i <= 7) {
+        moves.push(new Square(location.row + i, location.col))
+      }
+    }
+
+    for (let i = 1; i <= 7; i++) {
+      if (location.row - i >= 0) {
+        moves.push(new Square(location.row - i, location.col))
+      }
+    }
+
+    for (let i = 1; i <= 7; i++) {
+      if (location.col + i <= 7) {
+        moves.push(new Square(location.row, location.col + i))
+      }
+    }
+
+    for (let i = 1; i <= 7; i++) {
+      if (location.col - i >= 0) {
+        moves.push(new Square(location.row, location.col - i))
+      }
+    }
+
+    return moves
   }
 
   moveTo(board, newSquare) {
     const currentSquare = board.findPiece(this)
     board.movePiece(currentSquare, newSquare)
-
-    //copy bishop 
-    //rook only moves in one direct, 4 for loops. up down left and right 
-    //one direction at a time  location.row -i, location.col [LEAVE BLANK]
   }
 }

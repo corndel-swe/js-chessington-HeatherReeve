@@ -13,5 +13,9 @@ static max (a, b) {
 static round (number) {
     return Math.round(number)
 }
+static roundDown (number) {
+    return Math.floor (number)
+}
 
 }
+
