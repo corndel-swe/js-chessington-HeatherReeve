@@ -3,6 +3,7 @@ import Player from '../../../src/models/player.js'
 import Square from '../../../src/models/square.js'
 import Board from '../../../src/models/board.js'
 import Queen from '../../../src/models/pieces/queen.js'
+import Pawn from '../../../src/models/pieces/pawn.js'
 
 describe('Queen', () => {
     let board
@@ -31,8 +32,11 @@ describe('Queen', () => {
         ]
         for (let expectedMove of expectedMoves){
             assert (moves.some(square =>square.equals(expectedMove)))
-        }
-})
+        }       
+       
+    
+        })
+
 
         it('can move laterally', () => {
             const queen = new Queen(Player.WHITE)
@@ -63,7 +67,30 @@ describe('Queen', () => {
             for (let expectedMove of expectedMoves){
                 assert (moves.some(square =>square.equals(expectedMove)))
             }       
-    
-          })
+           
+      
+        })
+
+        it('cannot make any other moves', () => {
+    const queen = new Queen(Player.WHITE)
+    board.setPiece(new Square(1, 2), queen)
+
+    const moves = queen.getAvailableMoves(board)
+
+    assert.equal(moves.length, 23, '`moves` does not have length 23')
+  })
+
+  it('cannot move through friendly pieces', () => {
+    const queen = new Queen(Player.WHITE)
+    const friendlyPiece = new Pawn(Player.WHITE)
+    board.setPiece(new Square(4, 4), queen)
+    board.setPiece(new Square(4, 6), friendlyPiece)
+
+    const moves = queen.getAvailableMoves(board)
+
+    assert(
+      !moves.some(square => square.equals(new Square(4, 7))),
+      '`moves` contains the square (4, 7)'
+    )
       })
-  
+})

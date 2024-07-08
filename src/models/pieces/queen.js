@@ -31,12 +31,36 @@ export default class Queen {
         
   }
 } 
-return moves
-   
+
+    for (let i = 1; i <= 7; i++) {
+      if (location.row + i <= 7) {
+        moves.push(new Square(location.row + i, location.col))
+      }
+    }
+
+    for (let i = 1; i <= 7; i++) {
+      if (location.row - i >= 0) {
+        moves.push(new Square(location.row - i, location.col))
+      }
+    }
+
+    for (let i = 1; i <= 7; i++) {
+      if (location.col + i <= 7) {
+        moves.push(new Square(location.row, location.col + i))
+      }
+    }
+
+    for (let i = 1; i <= 7; i++) {
+      if (location.col - i >= 0) {
+        moves.push(new Square(location.row, location.col - i))
+      }
+    }
+
+   return moves 
   }
-  
+  moveTo(board, newSquare) {
+    const currentSquare = board.findPiece(this)
+    board.movePiece(currentSquare, newSquare)
+  }
  
 }
-  
-
- 
